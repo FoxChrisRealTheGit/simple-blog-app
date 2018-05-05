@@ -8,6 +8,7 @@ import promise from "redux-promise";
 import reducers from "./ducks/reducers";
 import PostsIndex from "./components/posts_index";
 import PostsNew from "./components/posts_new";
+import PostsShow from "./components/posts_show";
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -19,6 +20,7 @@ ReactDOM.render(
             <div>
                 <Switch>
                     <Route path="/posts/new" component={PostsNew} />
+                    <Route path="/post/:id" component={PostsShow} />
                     <Route path="/" component={PostsIndex} />
                 </Switch>
             </div>
